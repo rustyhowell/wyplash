@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="6" name="pytest" skips="0" tests="12" time="0.050"><testcase classname="test_a" file="test_a.py" line="0" name="test1" time="0.0004096031188964844"></testcase><testcase classname="test_a" file="test_a.py" line="3" name="test2" time="0.0013408660888671875"><failure message="assert False">def test2():
+&gt;       assert False
+E       assert False
+
+test_a.py:5: AssertionError</failure></testcase><testcase classname="test_a" file="test_a.py" line="6" name="test3" time="0.0002694129943847656"></testcase><testcase classname="test_a" file="test_a.py" line="9" name="test4" time="0.00026988983154296875"></testcase><testcase classname="test_a" file="test_a.py" line="12" name="test5" time="0.00028586387634277344"><failure message="AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;">def test5():
+        a = None
+&gt;       a.foo()
+E       AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;
+
+test_a.py:15: AttributeError</failure></testcase><testcase classname="test_a" file="test_a.py" line="16" name="test6" time="0.0004596710205078125"><failure message="Exception: hasdf">def test6():
+&gt;       raise Exception(&apos;hasdf&apos;)
+E       Exception: hasdf
+
+test_a.py:18: Exception</failure></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="0" name="test11" time="0.00028634071350097656"></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="3" name="test12" time="0.0003237724304199219"><failure message="assert False">def test12():
+&gt;       assert False
+E       assert False
+
+sub/test_b.py:5: AssertionError</failure></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="6" name="test13" time="0.0002682209014892578"></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="9" name="test14" time="0.00024962425231933594"></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="12" name="test15" time="0.0002751350402832031"><failure message="AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;">def test15():
+        a = None
+&gt;       a.foo()
+E       AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;
+
+sub/test_b.py:15: AttributeError</failure></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="16" name="test16" time="0.0002739429473876953"><failure message="Exception: hasdf">def test16():
+&gt;       raise Exception(&apos;hasdf&apos;)
+E       Exception: hasdf
+
+sub/test_b.py:18: Exception</failure></testcase></testsuite>
