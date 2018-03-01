@@ -100,5 +100,9 @@ ENV/
 # mypy
 .mypy_cache/
 
-#PyCharm
+# PyCharm
 .idea
+
+# flask
+*.db
+
