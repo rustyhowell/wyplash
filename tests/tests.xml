@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="6" name="pytest" skips="0" tests="12" time="0.050"><testcase classname="test_a" file="test_a.py" line="0" name="test1" time="0.0004096031188964844"></testcase><testcase classname="test_a" file="test_a.py" line="3" name="test2" time="0.0013408660888671875"><failure message="assert False">def test2():
-&gt;       assert False
-E       assert False
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="3" name="pytest" skips="0" tests="27" time="0.072"><testcase classname="module1" file="module1.py" line="2" name="test_module1_1" time="0.00047278404235839844"></testcase><testcase classname="module1" file="module1.py" line="7" name="test_module1_2" time="0.00044155120849609375"></testcase><testcase classname="module1" file="module1.py" line="11" name="test_module1_3" time="0.00031828880310058594"></testcase><testcase classname="module1" file="module1.py" line="15" name="test_module1_4" time="0.0003001689910888672"></testcase><testcase classname="module1" file="module1.py" line="19" name="test_module1_5" time="0.0004477500915527344"></testcase><testcase classname="module1" file="module1.py" line="23" name="test_module1_6" time="0.0004489421844482422"><failure message="AssertionError">random_fail = False
 
-test_a.py:5: AssertionError</failure></testcase><testcase classname="test_a" file="test_a.py" line="6" name="test3" time="0.0002694129943847656"></testcase><testcase classname="test_a" file="test_a.py" line="9" name="test4" time="0.00026988983154296875"></testcase><testcase classname="test_a" file="test_a.py" line="12" name="test5" time="0.00028586387634277344"><failure message="AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;">def test5():
-        a = None
-&gt;       a.foo()
-E       AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;
+    def test_module1_6(random_fail):
+        f = random_fail
+&gt;       assert f
+E       AssertionError
 
-test_a.py:15: AttributeError</failure></testcase><testcase classname="test_a" file="test_a.py" line="16" name="test6" time="0.0004596710205078125"><failure message="Exception: hasdf">def test6():
-&gt;       raise Exception(&apos;hasdf&apos;)
-E       Exception: hasdf
+module1.py:26: AssertionError</failure></testcase><testcase classname="module1" file="module1.py" line="27" name="test_module1_7" time="0.0003662109375"></testcase><testcase classname="module1" file="module1.py" line="31" name="test_module1_8" time="0.0003154277801513672"></testcase><testcase classname="module1" file="module1.py" line="35" name="test_module1_9" time="0.00031948089599609375"></testcase><testcase classname="module1" file="module1.py" line="39" name="test_module1_10" time="0.0003173351287841797"></testcase><testcase classname="module1" file="module1.py" line="43" name="test_module1_11" time="0.0003139972686767578"></testcase><testcase classname="module1" file="module1.py" line="48" name="test_module1_12" time="0.0004417896270751953"></testcase><testcase classname="usb_module" file="usb_module.py" line="8" name="test_partition[part1-/dev/sda1]" time="0.0004909038543701172"></testcase><testcase classname="usb_module" file="usb_module.py" line="8" name="test_partition[foo bar-/dev/sda2]" time="0.0004856586456298828"></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[0]" time="0.00045490264892578125"></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[1]" time="0.0004260540008544922"></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[2]" time="0.001125335693359375"><failure message="AssertionError">random_fail = False, n = 2
 
-test_a.py:18: Exception</failure></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="0" name="test11" time="0.00028634071350097656"></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="3" name="test12" time="0.0003237724304199219"><failure message="assert False">def test12():
-&gt;       assert False
-E       assert False
+    @pytest.mark.parametrize(&apos;n&apos;, range(8))
+    def test_moduleA1(random_fail, n):
+        f = random_fail
+    
+&gt;       assert f
+E       AssertionError
 
-sub/test_b.py:5: AssertionError</failure></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="6" name="test13" time="0.0002682209014892578"></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="9" name="test14" time="0.00024962425231933594"></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="12" name="test15" time="0.0002751350402832031"><failure message="AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;">def test15():
-        a = None
-&gt;       a.foo()
-E       AttributeError: &apos;NoneType&apos; object has no attribute &apos;foo&apos;
+packageA/moduleA1.py:8: AssertionError</failure></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[3]" time="0.0004334449768066406"></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[4]" time="0.0006015300750732422"></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[5]" time="0.0004458427429199219"></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[6]" time="0.0004966259002685547"><failure message="AssertionError">random_fail = False, n = 6
 
-sub/test_b.py:15: AttributeError</failure></testcase><testcase classname="sub.test_b" file="sub/test_b.py" line="16" name="test16" time="0.0002739429473876953"><failure message="Exception: hasdf">def test16():
-&gt;       raise Exception(&apos;hasdf&apos;)
-E       Exception: hasdf
+    @pytest.mark.parametrize(&apos;n&apos;, range(8))
+    def test_moduleA1(random_fail, n):
+        f = random_fail
+    
+&gt;       assert f
+E       AssertionError
 
-sub/test_b.py:18: Exception</failure></testcase></testsuite>
+packageA/moduleA1.py:8: AssertionError</failure></testcase><testcase classname="packageA.moduleA1" file="packageA/moduleA1.py" line="3" name="test_moduleA1[7]" time="0.0006861686706542969"></testcase><testcase classname="packageB.moduleB1" file="packageB/moduleB1.py" line="10" name="test_b1[a]" time="0.0004889965057373047"></testcase><testcase classname="packageB.moduleB1" file="packageB/moduleB1.py" line="10" name="test_b1[b]" time="0.00042557716369628906"></testcase><testcase classname="packageB.moduleB1" file="packageB/moduleB1.py" line="10" name="test_b1[c]" time="0.0004210472106933594"></testcase><testcase classname="packageB.moduleB1" file="packageB/moduleB1.py" line="10" name="test_b1[d]" time="0.0004363059997558594"></testcase><testcase classname="packageB.moduleB1" file="packageB/moduleB1.py" line="10" name="test_b1[e]" time="0.0004258155822753906"></testcase></testsuite>
